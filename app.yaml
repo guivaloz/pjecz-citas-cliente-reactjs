@@ -1,0 +1,12 @@
+runtime: python39
+
+handlers:
+  # Maneja la ruta raíz
+  - url: /
+    static_files: index.html
+    upload: index.html
+
+  # Maneja el logo y otros archivos estáticos
+  - url: /(.*)
+    static_files: \1
+    upload: (.*)
