@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PJECZ Sistema de Citas</title>
+        <style>
+            /* CSS Convencional */
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #ffffff;
+                font-family: Arial, sans-serif;
+                text-align: center;
+            }
+
+            .container {
+                width: 400px;
+            }
+
+            .logo-placeholder {
+                width: 400px;
+                height: 300px;
+                background-color: #f0f0f0; /* Color de fondo si no hay imagen */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
+                border: 1px solid #ddd;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            h1 {
+                font-size: 24px;
+                color: #333;
+                margin: 0;
+            }
+
+            .mensaje {
+                margin-top: 10px;
+                font-size: 14px;
+                color: #666;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="logo-placeholder">
+                <img src="logo.png" alt="Logotipo" width="400" height="250" />
+            </div>
+            <a href="https://citas.saji.gob.mx/">
+                <h1>Sistema de Citas</h1>
+            </a>
+            <p class="mensaje">
+                Redirigiendo en <span id="contador">5</span> segundos...
+            </p>
+        </div>
+
+        <script>
+            // JavaScript Convencional
+            var segundos = 5;
+            var display = document.getElementById("contador");
+            var destino = "https://citas.saji.gob.mx/";
+
+            var intervalo = setInterval(function () {
+                segundos--;
+                display.textContent = segundos;
+                if (segundos <= 0) {
+                    clearInterval(intervalo);
+                    window.location.href = destino;
+                }
+            }, 1000);
+        </script>
+    </body>
+</html>
