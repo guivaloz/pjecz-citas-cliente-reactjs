@@ -1,4 +1,5 @@
 runtime: python39
+service: citas-cliente
 
 handlers:
   # Maneja la ruta raíz
