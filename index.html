@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>PJECZ Sistema de Citas</title>
+        <title>PJECZ Sistema de Citas - Mantenimiento</title>
         <style>
             /* CSS Convencional */
             body {
@@ -19,7 +19,7 @@
             }
 
             .container {
-                width: 400px;
+                width: 420px;
             }
 
             .logo-placeholder {
@@ -41,13 +41,32 @@
             h1 {
                 font-size: 24px;
                 color: #333;
-                margin: 0;
+                margin: 0 0 10px 0;
             }
 
             .mensaje {
                 margin-top: 10px;
+                font-size: 18px;
+                color: #444;
+            }
+
+            .submensaje {
+                margin-top: 8px;
                 font-size: 14px;
                 color: #666;
+            }
+
+            .info {
+                margin-top: 18px;
+                font-size: 13px;
+                color: #888;
+            }
+
+            .contacto {
+                margin-top: 12px;
+                font-size: 13px;
+                color: #444;
+                text-decoration: none;
             }
         </style>
     </head>
@@ -56,28 +75,22 @@
             <div class="logo-placeholder">
                 <img src="logo.png" alt="Logotipo" width="400" height="250" />
             </div>
-            <a href="https://citas.saji.gob.mx/">
-                <h1>Sistema de Citas</h1>
-            </a>
-            <p class="mensaje">
-                Redirigiendo en <span id="contador">5</span> segundos...
+
+            <h1>Sistema de Citas</h1>
+
+            <p class="mensaje">ESTE SISTEMA SE ENCUENTRA EN MANTENIMIENTO</p>
+            <p class="submensaje">
+                Próximamente estará disponible una nueva versión.
             </p>
+
+            <p class="info">Gracias por su paciencia.</p>
+
+            <!-- Opcional: enlace al sistema o contacto (desactivado mientras haya mantenimiento) -->
+            <a class="contacto" href="https://www.pjecz.gob.mx/">
+                Poder Judicial del Estado de Coahuila de Zaragoza
+            </a>
         </div>
 
-        <script>
-            // JavaScript Convencional
-            var segundos = 5;
-            var display = document.getElementById("contador");
-            var destino = "https://citas.saji.gob.mx/";
-
-            var intervalo = setInterval(function () {
-                segundos--;
-                display.textContent = segundos;
-                if (segundos <= 0) {
-                    clearInterval(intervalo);
-                    window.location.href = destino;
-                }
-            }, 1000);
-        </script>
+        <!-- No hay redirección automática mientras el sistema está en mantenimiento -->
     </body>
 </html>
